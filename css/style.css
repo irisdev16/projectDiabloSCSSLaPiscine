@@ -1,0 +1,651 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+header {
+  position: relative;
+  background-image: url("../img/fond-header.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+header #logo {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+}
+header nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-30%);
+  right: 10%;
+  transform: translateX(150%);
+  transition: transform 1s;
+}
+header nav > ul {
+  list-style: none;
+  width: 350px;
+}
+header nav > ul li {
+  margin-bottom: 30px;
+  position: relative;
+}
+header nav > ul li#trait::after {
+  content: "";
+  position: absolute;
+  bottom: -90%;
+  right: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: white;
+}
+header nav > ul li a {
+  font-family: "diabloLight";
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+}
+header nav > ul li ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+header nav > ul li ul li {
+  width: 10%;
+}
+header #burger {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 2%;
+  right: 3%;
+}
+header #burger li {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 3px;
+  transition: transform 1s;
+  list-style: none;
+}
+header #burger:hover #premier {
+  transform: rotate(45deg) translate(33px, 30px);
+}
+header #burger:hover #second {
+  opacity: 0;
+}
+header #burger:hover #troisieme {
+  transform: rotate(-45deg) translate(35px, -33px);
+}
+header #burger:hover + nav {
+  transform: translate(-1%);
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+main {
+  overflow: hidden;
+}
+main #nouveauté {
+  background-image: url("../img/bgImage-chien.png");
+  background-size: contain;
+  background-position: 1000% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+main #nouveauté h2 {
+  color: white;
+  font-family: "diabloLight";
+  font-size: 50px;
+  transform: translateX(5%);
+}
+main #nouveauté h3 {
+  font-family: "diabloLight";
+  color: green;
+  font-size: 20px;
+  width: 130px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transform: translateX(75%);
+}
+main #nouveauté p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  width: 500px;
+  line-height: 30px;
+  transform: translateX(20%);
+}
+
+.pub ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pub ul li {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+  list-style: none;
+}
+.pub ul li:nth-of-type(1) {
+  width: 150px;
+}
+.pub ul li:nth-of-type(2) {
+  width: 400px;
+}
+.pub ul a {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  background-color: rgb(36, 255, 36);
+  border-radius: 10px;
+  padding: 5px;
+  text-decoration: none;
+}
+.pub ul a:hover {
+  background-color: black;
+  color: green;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+main #mercenaires {
+  background-image: url("../img/bgImage-personnages.png");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+main #mercenaires::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, black, transparent);
+  z-index: 500;
+}
+main #mercenaires > article {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  z-index: 1500;
+}
+main #mercenaires > article div {
+  padding-top: 10%;
+}
+main #mercenaires > article div h3 {
+  font-family: "diabloLight";
+  color: green;
+  font-size: 20px;
+  width: 130px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+main #mercenaires > article div p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  width: 500px;
+  line-height: 30px;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+#sacresprit {
+  display: flex;
+  height: 100vh;
+}
+#sacresprit #imgLogo {
+  width: 50%;
+}
+#sacresprit #imgLogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#sacresprit .texte {
+  width: 50%;
+}
+#sacresprit .texte .titre {
+  color: white;
+  font-family: "diabloLight";
+  font-size: 50px;
+}
+#sacresprit ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+#sacresprit ul li .logos {
+  width: 15%;
+  transition: width 1s;
+}
+#sacresprit ul li .logos img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#sacresprit ul li h3 {
+  font-family: "diabloLight";
+  color: white;
+  font-size: 20px;
+  width: 400px;
+  margin-top: 20px;
+  transition: transform 1s;
+}
+#sacresprit ul li p {
+  opacity: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  width: 500px;
+  line-height: 30px;
+  font-size: 15px;
+  transition: opacity 1s;
+}
+#sacresprit ul .logos:hover + div > p {
+  opacity: 1;
+}
+#sacresprit ul .logos:hover {
+  width: 150px;
+}
+#sacresprit ul .logos:hover + div > h3 {
+  transform: translateY(-50px);
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+h2 {
+  color: white;
+  font-family: "diabloLight";
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#gameplay {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+#gameplay article:nth-of-type(1) {
+  margin: auto;
+}
+#gameplay article:nth-of-type(1) h3 {
+  font-family: "diabloLight";
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#gameplay article:nth-of-type(1) p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  width: 500px;
+  line-height: 30px;
+  margin-bottom: 70px;
+}
+#gameplay article:nth-of-type(1) iframe {
+  border-radius: 20px;
+}
+#gameplay article:nth-of-type(2) {
+  margin: auto;
+}
+#gameplay article:nth-of-type(2) h2 {
+  color: white;
+  font-family: "diabloLight";
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#gameplay article:nth-of-type(2) h3 {
+  font-family: "diabloLight";
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#gameplay article:nth-of-type(2) p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  width: 500px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+#gameplay article:nth-of-type(2) iframe {
+  border-radius: 20px;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+h2 {
+  color: white;
+  font-family: "diabloLight";
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.grid80 {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.grid80 > div:first-of-type {
+  position: relative;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  position: relative;
+  overflow: hidden;
+}
+.grid80 > div:first-of-type:hover .hover1 {
+  transform: translateY(0%);
+}
+.grid80 > div:first-of-type img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.grid80 > div:first-of-type .hover1 {
+  position: absolute;
+  padding-top: 50%;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(99, 208, 6, 0.4);
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+.grid80 > div:first-of-type .hover1 span {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  font-size: 70px;
+  color: white;
+}
+.grid80 > div:first-of-type .hover1 span:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 59%;
+  right: 35%;
+  width: 30%;
+  height: 2px;
+  background-color: white;
+}
+.grid80 > div:nth-of-type(2) {
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  position: relative;
+  overflow: hidden;
+}
+.grid80 > div:nth-of-type(2):hover .hover2 {
+  transform: translateY(0%);
+}
+.grid80 > div:nth-of-type(2) div {
+  position: absolute;
+  padding-top: 25%;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(99, 208, 6, 0.4);
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+.grid80 > div:nth-of-type(2) div span {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  color: white;
+}
+.grid80 > div:nth-of-type(2) div span:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 57%;
+  right: 38%;
+  width: 25%;
+  height: 2px;
+  background-color: white;
+}
+.grid80 > div:nth-of-type(3) {
+  width: 100%;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  position: relative;
+  overflow: hidden;
+}
+.grid80 > div:nth-of-type(3):hover .hover3 {
+  transform: translateY(0%);
+}
+.grid80 > div:nth-of-type(3) div {
+  position: absolute;
+  padding-top: 25%;
+  top: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(99, 208, 6, 0.4);
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s;
+}
+.grid80 > div:nth-of-type(3) div span {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  color: white;
+}
+.grid80 > div:nth-of-type(3) div span:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 57%;
+  right: 38%;
+  width: 25%;
+  height: 2px;
+  background-color: white;
+}
+
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "diabloLight";
+  src: url("../font/Diablo Light.ttf");
+}
+@font-face {
+  font-family: "diablo";
+  src: url("../font/diablo.ttf");
+}
+@font-face {
+  font-family: "bildad";
+  src: url("../font/Bildad.ttf");
+}
+#footer {
+  margin-top: 30px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(132, 255, 17, 0.44), transparent);
+}
+#footer > ul {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80px;
+}
+#footer > ul > li:nth-of-type(1) {
+  width: 200px;
+}
+#footer > ul > li:nth-of-type(2) {
+  width: 200px;
+}
+#footer > ul > li:nth-of-type(2) a {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  font-size: 23px;
+}
+#footer > ul > li:nth-of-type(3) {
+  width: 400px;
+}
+#footer > ul > li:nth-of-type(3) a {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  background-color: rgb(36, 255, 36);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+#footer > ul > li:nth-of-type(3) a:hover {
+  background-color: black;
+  color: green;
+}
+#footer > ul li {
+  font-family: "bildad";
+  font-size: 30px;
+  color: white;
+  width: 150px;
+  text-align: center;
+  list-style: none;
+  color: white;
+}
+#footer > ul li a {
+  font-family: "diabloLight";
+  text-decoration: none;
+  color: white;
+}
+#footer > ul li ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+#footer > ul li ul li {
+  width: 15%;
+}/*# sourceMappingURL=style.css.map */

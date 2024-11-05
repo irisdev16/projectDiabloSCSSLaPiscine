@@ -1,0 +1,81 @@
+
+body{
+    background-color: black;
+}
+
+@font-face{
+    font-family: "diabloLight";
+    src: url("../font/Diablo\ Light.ttf");
+}
+
+@font-face{
+    font-family: "diablo";
+    src: url("../font/diablo.ttf");
+}
+
+@font-face{
+    font-family: "bildad";
+    src: url("../font/Bildad.ttf");
+}
+
+// -------HEADER-------
+
+@mixin header{
+    position: relative;
+    background-image: url("../img/fond-header.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+@mixin diabloLight{
+    font-family: "diabloLight";
+}
+
+@mixin img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// ----PUB----
+
+@mixin bildad{
+    font-family: "bildad";
+    font-size: 30px;
+    color: white;
+
+}
+
+// ---------MAIN--------
+
+@mixin paragraphe{
+    font-family: "Poppins", sans-serif;
+    color:$white;
+    font-size: 20px;
+    width: 500px;
+    line-height: 30px;
+
+}
+
+@mixin greenTitle{
+    font-family: "diabloLight";
+    color:$green;
+    font-size: 20px;
+    width: 130px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+@mixin h2{
+    color:$white;
+    font-family: "diabloLight";
+    font-size: 50px;
+}
+
+
+
+$flex:flex;
+$white:white;
+$green:green;

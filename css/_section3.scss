@@ -1,0 +1,74 @@
+@import '_vars.scss';
+
+
+
+#sacresprit{
+    display: flex;
+    height: 100vh;
+
+    #imgLogo{
+        width: 50%;
+        img{
+            @include img;
+        }
+    }
+
+    .texte{
+        width: 50%;
+        .titre{
+            @include h2;           
+        }
+    }
+
+    ul{
+        li{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5%;
+
+            .logos{
+                width: 15%;
+                img{
+                    @include img
+                }
+                transition: width 1s;
+                // background-color: purple
+            }
+
+            h3{
+                @include diabloLight;
+                color: $white;
+                font-size: 20px;
+                width: 400px;
+                // background-color: orange;
+                margin-top: 20px;
+                transition: transform 1s;
+            }
+
+            p{
+                opacity: 0;
+                @include paragraphe;
+                font-size: 15px;
+                transition: opacity 1s;
+            }
+
+        }
+
+        .logos:hover + div>p{
+            opacity: 1;
+        }
+
+        .logos:hover{
+            width: 150px;
+        }
+
+        .logos:hover + div>h3{
+            transform: translateY(-50px);
+        }
+
+       
+    }
+
+   
+}

@@ -1,0 +1,39 @@
+@import '_vars.scss';
+
+
+main{
+    overflow: hidden;
+
+   #nouveauté{
+    background-image: url("../img/bgImage-chien.png");
+    background-size: contain;
+    background-position: 1000% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+
+        h2{
+            @include h2;
+            transform: translateX(5%);
+            // background-color: red;
+        }
+
+        h3{
+            @include greenTitle;
+            transform: translateX(75%);
+            // background-color: blue;
+
+        }
+        p{
+            @include paragraphe;
+            transform: translateX(20%);
+            // background-color: green;
+    
+        }
+   }
+
+        
+     
+}
+
+
